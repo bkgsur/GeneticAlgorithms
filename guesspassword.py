@@ -7,9 +7,9 @@ import datetime
 def fitness_score(target,guess):
     return sum (1 for correct, guessed in zip (guess,target) if correct == guessed)
 
-def display(guess, score,startTime):
+def display(guess,startTime):
     diffTime = datetime.datetime.now() - startTime
-    print("{0}\t{1}\t{2}".format(guess,score,diffTime))
+    print("{0}\t{1}\t{2}".format(guess.genes,guess.score,diffTime))
 
 def guess_helloWorld():
     target = "Hello World!"   
